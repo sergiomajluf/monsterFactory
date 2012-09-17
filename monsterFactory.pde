@@ -5,7 +5,7 @@ int index = int(random(5));
 // this index is used all over the place!
 
 void setup() {
-  size (600, 300);
+  size (600, 400);
   background (60);
   noStroke();
   smooth();
