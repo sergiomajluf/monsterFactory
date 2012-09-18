@@ -10,7 +10,7 @@ void setup() {
   noStroke();
   smooth();
   frameRate(3);
-}
+  }
 
 void draw() {
   drawInterface();
@@ -20,7 +20,7 @@ void draw() {
   // random index generator should be global, like the one at the
   // beggining of the script.
   
-  // int indexTemp = int(random(5));  
-  // index = indexTemp;
+  int indexTemp = int(random(5));  
+   index = indexTemp;
 }
 
