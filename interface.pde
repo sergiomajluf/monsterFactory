@@ -71,28 +71,6 @@ void update(int x, int y) {
   }
 }
 
-void mousePressed() {
-  if (handleOver) {
-    currentColor = rectPressed;
-    println("click while over");
-    int indexTemp = int(random(5));  
-    index = indexTemp;   
-  }
-  else {
-    println("click elsewhere");
-  }
-}
-void mouseReleased() {
-  if (handleOver) {
-    currentColor = rectColor;
-    println("released while over");
-    ellipseY = 95;
-      handleStickY = 96;
-  }
-  else {
-    println("released elsewhere");
-  }
-}
 
 // This boolean will be true whenever the mouse position
 // matches the width and/or height of the rectangle
