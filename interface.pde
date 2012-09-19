@@ -8,12 +8,12 @@ void drawInterface() {
   noFill();
   strokeWeight(2);
   stroke(90);
-  rect(margin, margin, 270, 160); 
-  rect(margin, margin + 160, 270, 100);
+  rect(margin, margin, 270, 160, 10); 
+  rect(margin, margin + 160, 270, 100, 10);
 
   // draw the text area background
   fill(90);
-  rect(380, 0, 220, 300);
+  rect(380, 0, 250, 300, 10);
 
   // main button, slot machine handle
   rectColor = color(50);
@@ -32,17 +32,33 @@ void drawInterface() {
     cursor(HAND);
     if (mousePressed == true) {
       fill(rectPressed);
+        ellipseY = 189;
+        handleStickY = 135;
      }
   } 
   else {
     fill(rectColor);
     cursor(ARROW);
+      ellipseY = 95;
+      handleStickY = 96;
   }
 
-  rect(handleX, handleY, handleSizeX, handleSizeY);
-  drawHandle();
+  rect(handleX, handleY, handleSizeX, handleSizeY, 10);
+
   noStroke();
   fill (70);
+  
+  noStroke();
+  // handle backplate
+  fill (0);
+  rect(325, 83, 20, 115);
+  // down Handle
+  fill(160);
+  rect(332, handleStickY, 6, 52);
+  fill(250, 255, 0);
+  ellipse(335, ellipseY, 15, 15);
+  
+   
 }
 
 
@@ -70,6 +86,8 @@ void mouseReleased() {
   if (handleOver) {
     currentColor = rectColor;
     println("released while over");
+    ellipseY = 95;
+      handleStickY = 96;
   }
   else {
     println("released elsewhere");
@@ -86,43 +104,5 @@ boolean overRect(int x, int y, int width, int height) {
   else {
     return false;
   }
-}
-
-void drawHandle() {
-  if (!handleOver) {
-    drawHandleOff();
-  }  
-
-  else if (handleOver) {
-    drawHandleOff();
-  } 
-  else if (handleOver && mousePressed) {
-    drawHandle();
-  }
-}
-void drawHandleOff() {
-  noStroke();
-  // handle backplate
-  rect(327, 85, 20, 115);
-  fill (0);
-  rect(325, 83, 20, 115);
-  // up Handle
-  fill(160);
-  rect(332, 96, 6, 42);
-  fill(250, 255, 0);
-  ellipse(335, 95, 15, 15);
-}
-
-
-void drawHandleOver() {
-  noStroke();
-  // handle backplate
-  fill (0);
-  rect(325, 83, 20, 115);
-  // down Handle
-  fill(160);
-  rect(332, 138, 6, 52);
-  fill(250, 255, 0);
-  ellipse(335, 189, 15, 15);
 }
 

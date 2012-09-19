@@ -9,6 +9,8 @@ int handleSizeY = 180;    // Height of button
 color backgroundColor, rectColor, baseColor, rectHighlight, rectPressed, currentColor;
 boolean handleOver = false;
 int textX = 395;
+int ellipseY;
+int handleStickY;
 
 // Set an index for returning arrays in image strips and text
 // this index is used all over the place!
