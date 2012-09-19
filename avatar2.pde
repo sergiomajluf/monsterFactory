@@ -1,15 +1,6 @@
-int pixelSize = 20;
-int startingX = 110;
-int startingY = 110;
 
-void setup() {
-  size (500, 500);
-  background (255);
-  noStroke();
-  frameRate(1);
-}
 
-void draw() {
+void avatar2() {
   //head
   fill(random(0, 255), random(0, 255), random(0, 255));
   rect(startingX + 4 * pixelSize, startingY + 3 * pixelSize, 4 * pixelSize, 9 * pixelSize);

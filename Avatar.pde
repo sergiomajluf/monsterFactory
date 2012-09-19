@@ -2,17 +2,19 @@ int pixelSize = 20;
 int startingX = 110;
 int startingY = 110;
 
-void setup() {
-  size (500, 500);
-  background (51, 1, 106);
-  noStroke();
-}
+//void setup() {
+//  size (500, 500);
+//  background (51, 1, 106);
+//  noStroke();
+//}
 
-void draw() {
+//void draw() {
 
-  //helmet
-  //white
-  //fill (255);
+//helmet
+//white
+//fill (255);
+
+void avatar() {
   fill(random(0, 255), random(0, 255), random(0, 255));
   rect (startingX + 2 * pixelSize, startingY + 2 * pixelSize, 9 * pixelSize, 10 * pixelSize);
   rect (startingX + 1 * pixelSize, startingY + 3 * pixelSize, pixelSize, 8 * pixelSize);

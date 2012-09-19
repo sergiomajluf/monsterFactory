@@ -12,8 +12,8 @@ void drawText() {
   //display the text, using a specified fontface
   textFont(interfaceFont);
   fill(170);
-  text("say hello to:", 420, 30); 
-  text("I am a:", 420, 105); 
+  text("say hello to:", textX, 30); 
+  text("I am a:", textX, 105); 
 
   fill(240);
 
@@ -33,7 +33,7 @@ void drawText() {
   };
 
   // And finally, we display the text on screen, using the random index created in the main tab
-  text(mDescription[index], 420, 110, 160, 170);
+  text(mDescription[index], textX, 110, 170, 170);
 
   // then repeat the pattern, for displaying names
   textFont(displayFont);
@@ -49,6 +49,6 @@ void drawText() {
     mName1, mName2, mName3, mName4, mName5
   };
 
-  text(mName[index], 420, 60);
+  text(mName[index], textX, 60);
 }
 
